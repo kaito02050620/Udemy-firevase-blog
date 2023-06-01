@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <>
-      <p>kaito</p>
-    </>
-  );
+  return <></>;
 }
 
 export default App;
