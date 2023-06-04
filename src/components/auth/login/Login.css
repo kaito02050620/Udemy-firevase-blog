@@ -1,0 +1,46 @@
+.login_text {
+  font-family: "Kosugi Maru", sans-serif;
+  text-align: center;
+  color: rgb(46, 46, 46);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 50px;
+}
+
+.login_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_button button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgb(255, 210, 210);
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+.login_button p {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgb(46, 46, 46);
+  font-family: "Kosugi Maru", sans-serif;
+  margin: 10px;
+}
+
+.login_button svg {
+  display: inline-block;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.login_button button:hover {
+  background-color: rgb(255, 188, 188);
+}
