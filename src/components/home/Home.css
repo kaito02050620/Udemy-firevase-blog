@@ -1,0 +1,57 @@
+.homePage {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: "Kosugi Maru", sans-serif;
+}
+
+.postContents {
+  width: 600px;
+  height: auto;
+  max-height: 600px;
+  background-color: rgb(255, 206, 206);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.postHeader h1 {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.postTextContainer {
+  height: auto;
+  word-wrap: break-word;
+  max-height: 400px;
+}
+
+.nameAndDeleteButton {
+  display: flex;
+  align-items: center;
+}
+
+.nameAndDeleteButton h3 {
+  flex: 80%;
+}
+
+.nameAndDeleteButton button {
+  flex: 20%;
+  margin-left: 10px;
+  padding: 10px;
+  width: 100px;
+  background-color: rgb(255, 75, 75);
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.2s;
+  font-size: 18px;
+  color: rgb(46, 46, 46);
+}
+
+.nameAndDeleteButton button:hover {
+  background-color: rgb(255, 189, 189);
+}

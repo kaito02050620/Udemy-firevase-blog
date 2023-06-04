@@ -1,6 +1,7 @@
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../firebase";
+import { auth } from "../../../firebase";
+import "./Logout.css";
 
 function Logout({ setIsAuth }) {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ function Logout({ setIsAuth }) {
       .then(() => {
         localStorage.removeItem("isAuth");
         setIsAuth(false);
-        navigate("/");
+        navigate("/login");
       })
       .catch((error) => {
         console.log(error);
@@ -20,8 +21,12 @@ function Logout({ setIsAuth }) {
 
   return (
     <div>
-      <p>本当にログアウトしますか？</p>
-      <button onClick={logoutGoogle}>ログアウト</button>
+      <p className="logout_text">本当にログアウトしますか？</p>
+      <div className="logout_button">
+        <button onClick={logoutGoogle}>
+          <p>ログアウト</p>
+        </button>
+      </div>
     </div>
   );
 }

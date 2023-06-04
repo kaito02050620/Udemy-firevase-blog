@@ -1,0 +1,62 @@
+.createPostPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  font-family: "Kosugi Maru", sans-serif;
+}
+
+.postContainer {
+  background-color: rgb(255, 191, 191);
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  width: 500px;
+  gap: 10px;
+}
+
+.postTitle {
+  margin-bottom: 5px;
+}
+
+.postContainer input {
+  width: 90%;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.postContainer textarea {
+  width: 90%;
+  height: 150px;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.inputPost {
+}
+
+.postButton {
+  padding: 10px;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(255, 210, 210);
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.2s;
+  font-size: 18px;
+  color: rgb(46, 46, 46);
+}
+
+.postButton:hover {
+  background-color: rgb(255, 85, 85);
+}

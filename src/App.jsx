@@ -1,25 +1,25 @@
 import "./App.css";
-// import normalize from "normalize.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import CreatePost from "./components/CreatePost";
-import Login from "./components/Login";
-import Logout from "./components/Logout";
+import Home from "./components/home/Home";
+import CreatePost from "./components/post/CreatePost";
+import Login from "./components/auth/login/Login";
+import Logout from "./components/auth/logout/Logout";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
 
 function App() {
-  const [isAuth, setIsAuth] = useState(false);
-
-  const isLogin = localStorage.getItem("isAuth");
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 
   return (
     <Router>
       <Navbar isAuth={isAuth} />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/createpost" element={<CreatePost />}></Route>
-        {isLogin ? (
+        <Route
+          path="/createpost"
+          element={<CreatePost isAuth={isAuth} />}
+        ></Route>
+        {isAuth ? (
           <Route
             path="/logout"
             element={<Logout setIsAuth={setIsAuth} />}

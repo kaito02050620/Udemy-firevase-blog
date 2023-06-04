@@ -15,15 +15,17 @@ function Navbar({ isAuth }) {
         <FontAwesomeIcon icon={faHouse} />
         ホーム
       </Link>
-      <Link to="/createpost">
-        <FontAwesomeIcon icon={faSquarePen} />
-        記事投稿
-      </Link>
       {isAuth ? (
-        <Link to="/logout">
-          <FontAwesomeIcon icon={faRightFromBracket} />
-          ログアウト
-        </Link>
+        <>
+          <Link to="/createpost">
+            <FontAwesomeIcon icon={faSquarePen} />
+            記事投稿
+          </Link>
+          <Link to="/logout">
+            <FontAwesomeIcon icon={faRightFromBracket} />
+            ログアウト
+          </Link>
+        </>
       ) : (
         <Link to="/login">
           <FontAwesomeIcon icon={faRightToBracket} />
